@@ -3,13 +3,13 @@ package com.example.demo.student;
 import java.time.LocalDate;
 
 public class Student {
-private Long id;
+private int id;
 private String name;
 private String email;
 private LocalDate dob;
 private Integer age;
 
-    public Student(Long id,String name, String email, LocalDate dob , Integer age){
+    public Student(int id,String name, String email, LocalDate dob , Integer age){
         this.id=id;
         this.age=age;
         this.dob=dob;
@@ -26,7 +26,7 @@ private Integer age;
     public String getEmail() {
         return email;
     }
-    public Long getId() {
+    public int getId() {
         return id;
     }
     public String getName() {
@@ -48,7 +48,7 @@ private Integer age;
         this.email = email;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
