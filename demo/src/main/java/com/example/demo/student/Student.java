@@ -16,7 +16,7 @@ public class Student {
             strategy = GenerationType.SEQUENCE,
             generator = "student_sequence"
     )
-    private int id;
+    private Integer id;
     private String name;
     private String email;
     private LocalDate dob;
@@ -39,7 +39,7 @@ public class Student {
     public String getEmail() {
         return email;
     }
-    public int getId() {
+    public Integer getId() {
         return id;
     }
     public String getName() {
