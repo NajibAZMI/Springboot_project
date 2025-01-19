@@ -23,4 +23,8 @@ public class StudentController {
     public void EnrgStudent(@RequestBody Student s){
        studentService.addNeWStudent(s);
     }
+    @DeleteMapping(path="/{Sid}")
+    private void SuppStudent(@PathVariable("Sid")  Long id){
+        studentService.deleteStudent(id);
+    }
 }

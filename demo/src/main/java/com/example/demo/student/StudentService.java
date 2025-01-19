@@ -26,4 +26,8 @@ public class StudentService {
         } System.out.println("Student "+s);
         studentRepository.save(s);
     }
+
+    public void deleteStudent(Long id) {
+        Student s=studentRepository.findAllById(id);
+    }
 }
