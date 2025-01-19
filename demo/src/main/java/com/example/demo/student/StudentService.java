@@ -28,6 +28,15 @@ public class StudentService {
     }
 
     public void deleteStudent(Long id) {
-        Student s=studentRepository.findAllById(id);
+       boolean ex=studentRepository.existsById(Math.toIntExact(id));
+       if(!ex){
+           throw new IllegalStateException("Student with ID("+id+") n existe pas");
+       }else {
+           studentRepository.deleteById(Math.toIntExact(id));
+       }
+    }
+
+    public void updateStudent(Long id, String name, String email) {
+
     }
 }

@@ -23,8 +23,12 @@ public class StudentController {
     public void EnrgStudent(@RequestBody Student s){
        studentService.addNeWStudent(s);
     }
-    @DeleteMapping(path="/{Sid}")
-    private void SuppStudent(@PathVariable("Sid")  Long id){
+    @DeleteMapping(path="/{id}")
+    public void SuppStudent(@PathVariable("id")  Long id){
         studentService.deleteStudent(id);
+    }
+    @PutMapping(path="/{id}")
+    public void updateStudent(@PathVariable("id")Long id,@RequestParam(required = false) String name,@RequestParam(required = false) String email){
+        studentService.updateStudent(id,name,email);
     }
 }
