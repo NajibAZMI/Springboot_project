@@ -29,6 +29,7 @@ public class StudentController {
     }
     @PutMapping(path="/{id}")
     public void updateStudent(@PathVariable("id")Long id,@RequestParam(required = false) String name,@RequestParam(required = false) String email){
+        System.out.println("rah chi put hnaya awlidi");
         studentService.updateStudent(id,name,email);
     }
 }

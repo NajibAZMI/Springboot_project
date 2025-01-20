@@ -1,5 +1,6 @@
 package com.example.demo.student;
 
+import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -35,8 +36,14 @@ public class StudentService {
            studentRepository.deleteById(Math.toIntExact(id));
        }
     }
-
+    @Transactional
     public void updateStudent(Long id, String name, String email) {
-
+        Student student=studentRepository.findById(id);
+             if(name != null){
+                 student.setName(name);
+             }
+             if(email !=null){
+                 student.setEmail(email);
+             }
     }
 }
