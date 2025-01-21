@@ -1,8 +1,7 @@
 package com.example.demo.student;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.*;
 
 import java.time.LocalDate;
 import java.time.Period;
@@ -24,6 +23,7 @@ public class Student {
     @Size(min = 5, max = 20, message = "Le prénom doit avoir entre 5 et 20 caractères")
     @NotNull(message = "Le nom est obligatoire")
     private String name;
+    @Email(message = "Adresse email invalide")
     private String email;
     private LocalDate dob;
     @Transient
