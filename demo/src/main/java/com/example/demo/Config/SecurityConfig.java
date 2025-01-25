@@ -14,9 +14,9 @@ public class SecurityConfig {
         http
                 .authorizeRequests()
                 .anyRequest()
-                .authenticated()            // Tout autre URL nécessite une authentification
-                .and()// Active le formulaire de connexion
-                .httpBasic();                  // URL de la page de connexion personnalisée
+                .authenticated()
+                .and()
+                .httpBasic();
 
         return http.build();
     }
