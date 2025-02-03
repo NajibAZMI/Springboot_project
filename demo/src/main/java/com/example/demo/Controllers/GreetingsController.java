@@ -12,7 +12,7 @@ public class GreetingsController {
     public ResponseEntity<String> SayHello(){
            return ResponseEntity.ok("Hello");
        }
-    @GetMapping("/goodbye")
+    @GetMapping("/goodbyeee")
     public ResponseEntity<String> SayGoodBye(){
         return ResponseEntity.ok("GoodBye");
     }
